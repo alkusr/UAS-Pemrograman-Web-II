@@ -18,4 +18,14 @@ class Amfibi extends Model
         'kandang_id',
         'makanan_id'
     ];
+
+    public function kandang(){
+        return $this->belongsTo(Kandang::class);
+    }
+    public function makanan(){
+        return $this->belongsTo(Makanan::class);
+    }
+    public function kesehatan(){
+        return $this->belongsTo(Kesehatan::class);
+    }
 }
