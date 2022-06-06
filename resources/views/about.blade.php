@@ -52,7 +52,7 @@
     <blockquote class="blockquote mb-0">
       <p>Project Website UAS Pemrograman WEB 2 | Kebun Binatang</p>
       <footer class="blockquote-footer">Sebuah website sistem informasi sederhana tentang kebun binatang yang memiliki setidaknya 7 tabel
-        [User, Binatang Darat, Binatang Air, Binatang Amfibi, Data Kandang, Data Kesehatan, Data Makanan]. <br> Memiliki beberapa fitur diantaranya,
+        [User, Binatang Darat, Binatang Air, Binatang Amfibi, Data Kandang, Data Kesehatan, Data Makanan] . <br> Memiliki beberapa fitur diantaranya,
         <ul>
           <li>Login & Logout</li>
           <li>Create, Read, Update, & Delete Data (CRUD)</li>
