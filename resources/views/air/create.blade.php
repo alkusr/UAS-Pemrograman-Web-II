@@ -42,7 +42,7 @@
 
     <div class="container">
     <div class="row">
-    <h1>Ini buat air</h1>
+    <h1>Ini nambah air</h1>
 
     <form method="post" action="{{route('store-air')}}">
         @csrf
