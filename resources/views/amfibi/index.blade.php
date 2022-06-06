@@ -42,7 +42,7 @@
 
     <div class="container">
     <div class="row">
-    <h1>Ini amfibi</h1>
+    <h1>Ini data satwa amfibi</h1>
 
     <table class="table">
   <thead>

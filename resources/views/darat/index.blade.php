@@ -42,7 +42,7 @@
 
     <div class="container">
     <div class="row">
-    <h1>Ini darat</h1>
+    <h1>Ini data satwa darat</h1>
 
     <table class="table">
   <thead>
