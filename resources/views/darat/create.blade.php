@@ -42,7 +42,7 @@
 
     <div class="container">
     <div class="row">
-    <h1>Ini buat darat</h1>
+    <h1>Ini nambah darat</h1>
 
     <form method="post" action="{{route('store-darat')}}">
         @csrf
