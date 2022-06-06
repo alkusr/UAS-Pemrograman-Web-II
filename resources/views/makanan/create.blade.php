@@ -42,7 +42,7 @@
 
     <div class="container">
     <div class="row">
-    <h1>Ini buat makanan</h1>
+    <h1>Ini nambah makanan</h1>
 
     <form method="post" action="{{route('store-makanan')}}">
         @csrf
