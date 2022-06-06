@@ -48,36 +48,31 @@
     <a href="{{route('create-makanan')}}" class="btn btn-success btn-large"> Tambah Data </a>
 
     <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Nama</th>
-      <th scope="col">Deskripsi</th>
-      <th scope="col">Aksi</th>
-    </tr>
-  </thead>
-  <tbody>
-  @foreach ($daftar_makanan as $makanan)
-    <tr>
-      <th scope="row">{{$loop->index+1}}</th>
-      <td>{{$makanan->nama}}</td>
-      <td>{{$makanan->deskripsi}}</td>
-      <!-- aksi -->
-      <td><a href="{{route('edit-makanan', $makanan->id)}}" class="btn btn-warning"> Edit </a>
-      <form style="display: inline" action="{{route('delete-makanan', $makanan->id)}}" method="post">
-          @csrf
-          @method('DELETE')
-          <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin?')">Delete</button>
-      </form></td>
-    </tr>
-    @endforeach
-  </tbody>
-</table>
-
-    <!-- @foreach ($daftar_makanan as $makanan)
-        <h4>No Binatang : {{ $makanan->no_binatang }}</h4>
-        <h4>Nama : {{ $makanan->nama }}</h4>
-    @endforeach -->
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nama</th>
+          <th scope="col">Deskripsi</th>
+          <th scope="col">Aksi</th>
+        </tr>
+      </thead>
+      <tbody>
+      @foreach ($daftar_makanan as $makanan)
+        <tr>
+          <th scope="row">{{$loop->index+1}}</th>
+            <td>{{$makanan->nama}}</td>
+            <td>{{$makanan->deskripsi}}</td>
+            <td><a href="{{route('edit-makanan', $makanan->id)}}" class="btn btn-warning"> Edit </a>
+              <form style="display: inline" action="{{route('delete-makanan', $makanan->id)}}" method="post">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin?')">Delete</button>
+              </form>
+            </td>
+        </tr>
+        @endforeach
+      </tbody>
+    </table>
     </div>
     </div>
 </body>
