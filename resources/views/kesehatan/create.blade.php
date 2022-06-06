@@ -42,7 +42,7 @@
 
     <div class="container">
     <div class="row">
-    <h1>Ini buat kesehatan</h1>
+    <h1>Ini nambah kesehatan</h1>
 
     <form method="post" action="{{route('store-kesehatan')}}">
         @csrf
