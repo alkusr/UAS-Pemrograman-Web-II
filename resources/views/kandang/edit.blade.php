@@ -42,37 +42,23 @@
 
     <div class="container">
     <div class="row">
-    <h1>Ini darat</h1>
+    <h1>Ini buat kandang</h1>
 
-    <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">No Binatang</th>
-      <th scope="col">Nama</th>
-      <th scope="col">Jenis</th>
-      <th scope="col">Jenis Kelamin</th>
-      <th scope="col">Kandang</th>
-      <th scope="col">Kesehatan</th>
-      <th scope="col">Makanan</th>
-    </tr>
-  </thead>
-  <tbody>
-  @foreach ($daftar_darat as $darat)
-    <tr>
-      <th scope="row">{{$loop->index+1}}</th>
-      <td>{{$darat->no_binatang}}</td>
-      <td>{{$darat->nama}}</td>
-      <td>{{$darat->jenis}}</td>
-      <td>{{$darat->jk}}</td>
-      <td>{{$darat->kandang_id}}</td>
-      <td>{{$darat->kesehatan_id}}</td>
-      <td>{{$darat->makanan_id}}</td>
-    </tr>
-    @endforeach
-  </tbody>
-</table>
-</div>
-</div>
+    <form method="post" action="{{route('update-kandang', $kandang->id)}}">
+        @csrf
+        @method('PUT')
+        <div class="mb-3">
+            <label for="nama" class="form-label">Nama</label>
+            <input type="text" class="form-control" id="nama" name="nama" value="{{$kandang->nama}}">
+        </div>
+        <div class="mb-3">
+            <label for="deskripsi" class="form-label">Deskripsi</label>
+            <input type="text" class="form-control" id="deskripsi" name="deskripsi" value="{{$kandang->deskripsi}}">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a href="{{route('browse-kandang')}}" class="btn btn-danger"> Batal </a>
+    </form>
+    </div>
+    </div>
 </body>
 </html>

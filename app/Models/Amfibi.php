@@ -14,8 +14,8 @@ class Amfibi extends Model
         'nama',
         'jenis',
         'jk',
-        's_kesehatan',
-        's_kandang',
-        's_makanan'
+        'kesehatan_id',
+        'kandang_id',
+        'makanan_id'
     ];
 }

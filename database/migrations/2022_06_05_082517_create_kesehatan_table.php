@@ -13,15 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('amfibi', function (Blueprint $table) {
+        Schema::create('kesehatan', function (Blueprint $table) {
             $table->id();
-            $table->string('no_binatang');
             $table->string('nama');
-            $table->string('jenis')->nullable();
-            $table->string('jk')->nullable();
-            $table->string('kandang_id')->nullable();
-            $table->string('kesehatan_id')->nullable();
-            $table->string('makanan_id')->nullable();
+            $table->string('deskripsi');
             $table->timestamps();
         });
     }
@@ -33,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('amfibi');
+        Schema::dropIfExists('kesehatan');
     }
 };

@@ -39,40 +39,45 @@
         </div>
     </div>
 </nav>
-
     <div class="container">
     <div class="row">
-    <h1>Ini darat</h1>
+
+    <h1>Ini admin kesehatan</h1>
+
+    <a href="{{route('create-kesehatan')}}" class="btn btn-success btn-large"> Tambah Data </a>
 
     <table class="table">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">No Binatang</th>
       <th scope="col">Nama</th>
-      <th scope="col">Jenis</th>
-      <th scope="col">Jenis Kelamin</th>
-      <th scope="col">Kandang</th>
-      <th scope="col">Kesehatan</th>
-      <th scope="col">Makanan</th>
+      <th scope="col">Deskripsi</th>
+      <th scope="col">Aksi</th>
     </tr>
   </thead>
   <tbody>
-  @foreach ($daftar_darat as $darat)
+  @foreach ($daftar_kesehatan as $kesehatan)
     <tr>
       <th scope="row">{{$loop->index+1}}</th>
-      <td>{{$darat->no_binatang}}</td>
-      <td>{{$darat->nama}}</td>
-      <td>{{$darat->jenis}}</td>
-      <td>{{$darat->jk}}</td>
-      <td>{{$darat->kandang_id}}</td>
-      <td>{{$darat->kesehatan_id}}</td>
-      <td>{{$darat->makanan_id}}</td>
+      <td>{{$kesehatan->nama}}</td>
+      <td>{{$kesehatan->deskripsi}}</td>
+      <!-- aksi -->
+      <td><a href="{{route('edit-kesehatan', $kesehatan->id)}}" class="btn btn-warning"> Edit </a>
+      <form style="display: inline" action="{{route('delete-kesehatan', $kesehatan->id)}}" method="post">
+          @csrf
+          @method('DELETE')
+          <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin?')">Delete</button>
+      </form></td>
     </tr>
     @endforeach
   </tbody>
 </table>
-</div>
-</div>
+
+    <!-- @foreach ($daftar_kesehatan as $kesehatan)
+        <h4>No Binatang : {{ $kesehatan->no_binatang }}</h4>
+        <h4>Nama : {{ $kesehatan->nama }}</h4>
+    @endforeach -->
+    </div>
+    </div>
 </body>
 </html>

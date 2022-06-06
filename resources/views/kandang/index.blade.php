@@ -42,32 +42,22 @@
 
     <div class="container">
     <div class="row">
-    <h1>Ini darat</h1>
+    <h1>Ini kandang</h1>
 
     <table class="table">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">No Binatang</th>
       <th scope="col">Nama</th>
-      <th scope="col">Jenis</th>
-      <th scope="col">Jenis Kelamin</th>
-      <th scope="col">Kandang</th>
-      <th scope="col">Kesehatan</th>
-      <th scope="col">Makanan</th>
+      <th scope="col">Deskripsi</th>
     </tr>
   </thead>
   <tbody>
-  @foreach ($daftar_darat as $darat)
+  @foreach ($daftar_kandang as $kandang)
     <tr>
       <th scope="row">{{$loop->index+1}}</th>
-      <td>{{$darat->no_binatang}}</td>
-      <td>{{$darat->nama}}</td>
-      <td>{{$darat->jenis}}</td>
-      <td>{{$darat->jk}}</td>
-      <td>{{$darat->kandang_id}}</td>
-      <td>{{$darat->kesehatan_id}}</td>
-      <td>{{$darat->makanan_id}}</td>
+      <td>{{$kandang->nama}}</td>
+      <td>{{$kandang->deskripsi}}</td>
     </tr>
     @endforeach
   </tbody>

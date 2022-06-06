@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zoo - UAS Pemrograman Web 2</title>
+    <title>Beranda - UAS Pemrograman Web 2</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
 </head>
 <body>
 
@@ -42,37 +43,63 @@
 
     <div class="container">
     <div class="row">
-    <h1>Ini darat</h1>
+    
+    <div class="card">
+  <div class="card-header">
+    Deskripsi Singkat
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>Project Website UAS Pemrograman WEB 2 | Kebun Binatang</p>
+      <footer class="blockquote-footer">Sebuah website sistem informasi sederhana tentang kebun binatang yang memiliki setidaknya 7 tabel
+        [User, Binatang Darat, Binatang Air, Binatang Amfibi, Data Kandang, Data Kesehatan, Data Makanan]. <br> Memiliki beberapa fitur diantaranya,
+        <ul>
+          <li>Login & Logout</li>
+          <li>Create, Read, Update, & Delete Data (CRUD)</li>
+        </ul>
+      </footer>
+    </blockquote>
+  </div>
+</div>
 
-    <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">No Binatang</th>
-      <th scope="col">Nama</th>
-      <th scope="col">Jenis</th>
-      <th scope="col">Jenis Kelamin</th>
-      <th scope="col">Kandang</th>
-      <th scope="col">Kesehatan</th>
-      <th scope="col">Makanan</th>
-    </tr>
-  </thead>
-  <tbody>
-  @foreach ($daftar_darat as $darat)
-    <tr>
-      <th scope="row">{{$loop->index+1}}</th>
-      <td>{{$darat->no_binatang}}</td>
-      <td>{{$darat->nama}}</td>
-      <td>{{$darat->jenis}}</td>
-      <td>{{$darat->jk}}</td>
-      <td>{{$darat->kandang_id}}</td>
-      <td>{{$darat->kesehatan_id}}</td>
-      <td>{{$darat->makanan_id}}</td>
-    </tr>
-    @endforeach
-  </tbody>
-</table>
+<div class="card">
+  <div class="card-header">
+    Author
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>Kelompok 3 - UAS Pemrograman Web 2</p>
+      <footer class="blockquote-footer">
+        Kelompok 3 - UAS Pemrograman Web 2 beranggotakan
+        <ul>
+          <li>Ahmad Dany Adrian (2010817210019)</li>
+          <li>Muhammad Alkausar (2010817210008)</li>
+          <li>Muhammad Firda Ryanifar (2010817310003)</li>
+        </ul>
+      </footer>
+    </blockquote>
+  </div>
 </div>
+
+<div class="card">
+  <div class="card-header">
+    About++
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>Laravel</p>
+      <footer class="blockquote-footer">
+      https://laravel.com/
+      </footer>
+      <p>Bootstrap</p>
+      <footer class="blockquote-footer">
+      https://getbootstrap.com/
+      </footer>
+    </blockquote>
+  </div>
 </div>
+    
+    </div>
+    </div>
 </body>
 </html>

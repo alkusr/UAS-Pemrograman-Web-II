@@ -19,9 +19,9 @@ return new class extends Migration
             $table->string('nama');
             $table->string('jenis')->nullable();
             $table->string('jk')->nullable();
-            $table->string('s_kandang')->nullable();
-            $table->string('s_kesehatan')->nullable();
-            $table->string('s_makanan')->nullable();
+            $table->string('kandang_id')->nullable();
+            $table->string('kesehatan_id')->nullable();
+            $table->string('makanan_id')->nullable();
             $table->timestamps();
         });
     }

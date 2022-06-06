@@ -8,6 +8,38 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 <body>
+
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">KEBUN BINATANG</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="{{route('welcome')}}">Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="{{route('zoo-about')}}">About</a>
+            </li>
+            @auth
+            <li class="nav-item">
+            <form action="{{route('logout')}}" method="post">
+                @csrf
+                <button type="submit" class="btn btn-light">Logout</button>
+            </form>
+            </li>
+            @else
+            <li class="nav-item">
+            <a class="nav-link" href="{{route('login')}}">Login</a>
+            </li>
+            @endauth
+        </ul>
+        </div>
+    </div>
+</nav>
+
     <div class="container">
     <div class="row">
     <h1>Ini buat air</h1>
@@ -33,16 +65,16 @@
             <div id="Help" class="form-text">Silahkan isi dengan query [Jantan/Betina]!</div>
         </div>
         <div class="mb-3">
-            <label for="s_kandang" class="form-label">Kandang</label>
-            <input type="text" class="form-control" id="s_kandang" name="s_kandang">
+            <label for="kandang_id" class="form-label">Kandang</label>
+            <input type="text" class="form-control" id="kandang_id" name="kandang_id">
         </div>
         <div class="mb-3">
-            <label for="s_kesehatan" class="form-label">Kesehatan</label>
-            <input type="text" class="form-control" id="s_kesehatan" name="s_kesehatan">
+            <label for="kesehatan_id" class="form-label">Kesehatan</label>
+            <input type="text" class="form-control" id="kesehatan_id" name="kesehatan_id">
         </div>
         <div class="mb-3">
-            <label for="s_makanan" class="form-label">Makanan</label>
-            <input type="text" class="form-control" id="s_makanan" name="s_makanan">
+            <label for="makanan_id" class="form-label">Makanan</label>
+            <input type="text" class="form-control" id="makanan_id" name="makanan_id">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
         <a href="{{route('browse-air')}}" class="btn btn-danger"> Batal </a>
