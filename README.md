@@ -45,7 +45,7 @@ Sebelum melakukan instalasi, pastikan sudah menginstal PHP versi =>8.0 dan Compo
     ```env
     DB_HOST=127.0.0.1 # ganti dengan url anda atau biarkan default
     DB_PORT=3306 # ganti dengan port atau biarkan default
-    DB_DATABASE=toko-komputer-laravel # ganti dengan nama database yang telah dibuat atau buat database baru dengan nama zoo
+    DB_DATABASE=zoo # ganti dengan nama database yang telah dibuat atau buat database baru dengan nama zoo
     DB_USERNAME=root # sesuaikan dengan username database. biarkan default jika menggunakan database lokal
     DB_PASSWORD= # sesuaikan dengan password database. biarkan default jika menggunakan     database lokal
     ```
