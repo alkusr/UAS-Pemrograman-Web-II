@@ -13,4 +13,14 @@ class Makanan extends Model
         'nama',
         'deskripsi'
     ];
+
+    public function air(){
+        return $this->hasMany(Air::class);
+    }
+    public function darat(){
+        return $this->hasMany(Darat::class);
+    }
+    public function amfibi(){
+        return $this->hasMany(Amfibi::class);
+    }
 }
