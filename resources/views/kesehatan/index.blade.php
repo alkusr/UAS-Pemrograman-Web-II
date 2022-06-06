@@ -42,7 +42,7 @@
 
 <div class="container">
     <div class="row">
-    <h1>Ini kesehatan</h1>
+    <h1>Ini data jenis kesehatan</h1>
 
     <table class="table">
   <thead>
