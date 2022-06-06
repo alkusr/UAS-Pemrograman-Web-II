@@ -42,7 +42,7 @@
 
     <div class="container">
     <div class="row">
-    <h1>Ini buat amfibi</h1>
+    <h1>Ini nambah amfibi</h1>
 
     <form method="post" action="{{route('store-amfibi')}}">
         @csrf
