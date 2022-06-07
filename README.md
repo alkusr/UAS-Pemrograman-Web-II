@@ -65,3 +65,9 @@ Sebelum melakukan instalasi, pastikan sudah menginstal PHP versi =>8.0 dan Compo
 
 <p align="center">Apabila memerlukan database sqldump, file bernama zoo.sql</p>
 
+
+
+7. Credit to
+
+ - https://laravel.com/
+ - https://getbootstrap.com/
