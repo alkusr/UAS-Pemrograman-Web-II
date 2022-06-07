@@ -67,7 +67,7 @@ Sebelum melakukan instalasi, pastikan sudah menginstal PHP versi =>8.0 dan Compo
 
 
 
-7. Credit to
+Credit to
 
  - https://laravel.com/
  - https://getbootstrap.com/
